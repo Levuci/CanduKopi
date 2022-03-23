@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:id="@+id/tv_jenis"
+        android:textColor="@color/white"
+        android:text="Jenis Kopi?"
+        android:background="@color/red"
+        android:layout_height="wrap_content"/>
+    <RadioGroup
+        android:id="@+id/rg_kopi"
+        android:layout_below="@+id/tv_jenis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:text="Robusta"
+            android:id="@+id/rb_robusta"
+            android:layout_below="@+id/tv_jenis"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:background="@color/purple_700"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:background="@color/purple_700"
+            android:text="Expresso"
+            android:textColor="@color/white"
+            android:id="@+id/rb_expresso"
+            android:layout_below="@+id/rb_robusta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:textColor="@color/white"
+            android:text="Luwak"
+            android:background="@color/purple_700"
+            android:id="@+id/rb_luwak"
+            android:layout_below="@+id/rb_expresso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/tv_campuran"
+        android:textColor="@color/white"
+        android:text="Campuran Kopi?"
+        android:background="@color/red"
+        android:layout_below="@id/rg_kopi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/rg_campurankopi"
+        android:layout_below="@id/tv_campuran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rb_cream"
+            android:textColor="@color/white"
+            android:background="@color/purple_700"
+            android:text="Cream"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:background="@color/purple_700"
+            android:textColor="@color/white"
+            android:text="Sugar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_Sugar" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_below="@+id/rg_campurankopi"
+        android:text="Menu Tambahan?"
+        android:id="@+id/tv_tambahan"
+        android:layout_width="match_parent"
+        android:background="@color/red"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:layout_below="@+id/tv_tambahan"
+        android:id="@+id/rg_tambahan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:textColor="@color/white"
+            android:background="@color/purple_700"
+            android:text="Nasi Goreng"
+            android:id="@+id/rb_nasgor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:textColor="@color/white"
+            android:text="Mie Goreng"
+            android:background="@color/purple_700"
+            android:id="@+id/rb_miegor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:background="@color/purple_700"
+            android:textColor="@color/white"
+            android:text="Mie Rebus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_bayar"
+        android:layout_width="100dp"
+        android:onClick="clickBayar"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_tambahan"
+        android:text="Bayar" />
+    <TextView
+        android:id="@+id/tv_bayar"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Jumlah total bayar:"
+        android:layout_below="@id/btn_bayar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/jumlahBayar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_bayar"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="Jumlah Bayar : "
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
